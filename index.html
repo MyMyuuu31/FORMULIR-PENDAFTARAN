@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="formContainer">
+        <h2>FORMULIR PENDAFTARAN</h2>
+        <form id="registrationForm">
+            <!-- Nama Lengkap -->
+            <label>Nama Lengkap</label>
+            <div class="row">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+
+            <!-- Alamat -->
+            <label>Alamat</label>
+            <input type="text" id="street" placeholder="Jalan / Kampung" required>
+            <input type="text" id="district" placeholder="Kecamatan" required>
+            <div class="row">
+                <input type="text" id="city" placeholder="Kota / Kabupaten" required>
+                <input type="text" id="province" placeholder="Provinsi" required>
+            </div>
+            <div class="row">
+                <select id="country" required>
+                    <option value="">Please Select</option>
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                    <option>Singapura</option>
+                </select>
+                <input type="text" id="postalCode" placeholder="Kode Pos" required>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <label>Tanggal Lahir</label>
+            <input type="date" id="birthDate" required>
+
+            <!-- Email -->
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="ex: myname@example.com" required>
+
+            <!-- Telepon Rumah -->
+            <label>Telepon Rumah</label>
+            <div class="row">
+                <input type="text" id="areaCode" placeholder="Area Code">
+                <input type="text" id="homePhone" placeholder="Phone Number">
+            </div>
+
+            <!-- HP -->
+            <label>HP</label>
+            <input type="text" id="mobile" required>
+
+            <!-- NISN -->
+            <label>No Induk Siswa Nasional</label>
+            <input type="text" id="nisn" required>
+
+            <!-- Asal Sekolah -->
+            <label>Asal Sekolah</label>
+            <input type="text" id="school" required>
+
+            <!-- Alamat Sekolah -->
+            <label>Alamat Sekolah</label>
+            <textarea id="schoolAddress" rows="3" required></textarea>
+
+            <!-- Daftar Ke -->
+            <label>Daftar Ke</label>
+            <select id="registerTo" required>
+                <option value="">Please Select</option>
+                <option>SMK</option>
+                <option>SMA</option>
+            </select>
+
+            <!-- Upload Foto -->
+            <label>Add Photo</label>
+            <div class="photo-section">
+                <input type="file" id="photoInput" accept="image/*">
+                <button type="button" class="btn-secondary" id="driveBtn">Ambil dari Google Drive</button>
+                <img id="photoPreview" class="photo-preview">
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn">Submit Form</button>
+        </form>
+    </div>
+
+    <!-- Konfirmasi Data -->
+    <div class="container" id="confirmationContainer" style="display:none;">
+        <h2>Konfirmasi Data</h2>
+        <div id="dataSummary"></div>
+        <div class="row">
+            <button id="editBtn" class="btn-secondary">Edit</button>
+            <button id="confirmBtn" class="btn">Kirim</button>
+        </div>
+    </div>
+
+    <!-- Pesan Sukses -->
+    <div class="container" id="successContainer" style="display:none;">
+        <h2 style="color:green;">Pendaftaran Berhasil!</h2>
+        <p>Pendaftaran telah berhasil, tinggal menunggu info selanjutnya.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
